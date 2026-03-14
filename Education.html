@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Education - Sathishkumar J</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    html, body {
+      margin: 0; padding: 0;
+      height: 100%; width: 100%;
+      font-family: Arial, sans-serif;
+      color: white;
+      background: #000;
+    }
+
+    /* Sticky top navigation bar with logo */
+    nav {
+      position: fixed;
+      top: 0; width: 100%;
+      background: rgba(0,0,0,0.85);
+      padding: 0.8rem 2rem;
+      display: flex; align-items: center; justify-content: space-between;
+      z-index: 10;
+      border-bottom: 2px solid #00ffcc;
+      box-shadow: 0 0 10px #00ffcc;
+    }
+    .logo {
+      font-size: 1.8rem; font-weight: bold;
+      color: #00ffcc; letter-spacing: 3px;
+      text-shadow: 0 0 10px #00ffcc, 0 0 20px #00ffcc;
+      animation: glow 2s infinite alternate;
+    }
+    @keyframes glow {
+      from { text-shadow: 0 0 10px #00ffcc; }
+      to { text-shadow: 0 0 20px #00ffcc, 0 0 30px #00ffcc; }
+    }
+
+    .nav-links {
+      display: flex; gap: 20px;
+    }
+    .nav-links a {
+      color: #00ffcc; text-decoration: none;
+      font-weight: bold; padding: 6px 12px;
+      border-radius: 6px; transition: all 0.3s ease;
+    }
+    .nav-links a:hover {
+      background: #004080; color: #fff;
+      transform: scale(1.1);
+      box-shadow: 0 0 10px #00ffcc;
+    }
+
+    /* Education box */
+    .education-box {
+      background: rgba(0,0,0,0.75);
+      padding: 2rem;
+      border-radius: 12px;
+      max-width: 900px;
+      margin: 10% auto;
+      box-shadow: 0 0 15px #00ffcc;
+      text-align: center;
+      position: relative;
+      z-index: 5; /* keep content above background */
+    }
+    .education-box h1 {
+      color: #00ffcc;
+      font-size: 2.2rem;
+      margin-bottom: 1.5rem;
+      text-shadow: 0 0 10px #00ffcc;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: auto;
+    }
+    th, td {
+      padding: 12px;
+      border-bottom: 1px solid rgba(0,255,204,0.3);
+      text-align: left;
+    }
+    th {
+      color: #00ffcc;
+      font-size: 1.1rem;
+    }
+    tr:hover {
+      background: rgba(0,255,204,0.2);
+      transition: 0.3s;
+    }
+
+    footer {
+      position: fixed;
+      bottom: 0; width: 100%;
+      text-align: center;
+      color: #00ffcc;
+      font-size: 0.9rem; font-weight: bold;
+      padding: 10px 0;
+      z-index: 5;
+    }
+    footer::before {
+      content: ""; display: block;
+      height: 2px; width: 80%;
+      margin: 0 auto 8px auto;
+      background: linear-gradient(90deg, transparent, #00ffcc, transparent);
+      box-shadow: 0 0 8px #00ffcc;
+    }
+  </style>
+</head>
+<body>
+  <!-- Sticky Navigation Bar -->
+  <nav>
+    <div class="logo">JSK</div>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="vision.html">Vision</a>
+      <a href="skills.html">Skills</a>
+      <a href="experience.html">Experience</a>
+      <a href="education.html">Education</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </nav>
+
+  <!-- Education Content -->
+  <div class="education-box">
+    <h1>Education</h1>
+    <table>
+      <tr>
+        <th>Degree</th>
+        <th>Institution</th>
+        <th>Year</th>
+        <th>GPA</th>
+      </tr>
+      <tr>
+        <td>B.E. Electronics & Communication Engineering</td>
+        <td>Alpha College of Engineering, Chennai</td>
+        <td>2015</td>
+        <td>65%</td>
+      </tr>
+      <tr>
+        <td>Higher Secondary Certificate (HSC) - Science</td>
+        <td>Govt Higher Secondary School, Maduravoyal</td>
+        <td>2011</td>
+        <td>76%</td>
+      </tr>
+      <tr>
+        <td>Secondary School Leaving Certificate (SSLC) - Science</td>
+        <td>Govt Higher Secondary School, Maduravoyal</td>
+        <td>2009</td>
+        <td>81%</td>
+      </tr>
+    </table>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    © Sathishkumar J ®
+  </footer>
+
+  <!-- Background Animation Scripts -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vanta/dist/vanta.net.min.js"></script>
+  <script>
+    VANTA.NET({
+      el: "body",   // attach animation to the entire body
+      mouseControls: true,
+      touchControls: true,
+      minHeight: 200.00,
+      minWidth: 200.00,
+      scale: 1.0,
+      scaleMobile: 1.0,
+      color: 0x00ffcc,          // teal network lines
+      backgroundColor: 0x000000, // dark background
+      points: 15.0,             // number of points
+      maxDistance: 25.0,        // connection distance
+      spacing: 18.0             // spacing between points
+    });
+  </script>
+</body>
+</html>
