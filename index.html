@@ -25,8 +25,12 @@
     }
 
     .logo { font-size: 1.8rem; font-weight: bold; color: #ff6666; letter-spacing: 3px; }
-    .nav-links { display: flex; gap: 15px; }
-
+    .nav-links {
+  display: flex;
+  flex-wrap: wrap;   /* allow wrapping */
+  gap: 10px;
+  justify-content: center;
+}
     /* Unified smaller button styling for nav + hero */
     .nav-links a,
     .hero-buttons a {
