@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Experience - Sathishkumar J</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    html, body { margin:0; padding:0; height:100%; width:100%; font-family:Arial,sans-serif; color:white; background:#000; }
+    nav { position:fixed; top:0; width:100%; background:rgba(0,0,0,0.85); padding:0.8rem 2rem; display:flex; justify-content:space-between; z-index:10; border-bottom:2px solid #00ffcc; box-shadow:0 0 10px #00ffcc; }
+    .logo { font-size:1.8rem; font-weight:bold; color:#00ffcc; letter-spacing:3px; text-shadow:0 0 10px #00ffcc,0 0 20px #00ffcc; animation:glow 2s infinite alternate; }
+    @keyframes glow { from{ text-shadow:0 0 10px #00ffcc; } to{ text-shadow:0 0 20px #00ffcc,0 0 30px #00ffcc; } }
+    .nav-links { display:flex; gap:20px; }
+    .nav-links a { color:#00ffcc; text-decoration:none; font-weight:bold; padding:6px 12px; border-radius:6px; transition:0.3s; }
+    .nav-links a:hover { background:#004080; color:#fff; transform:scale(1.1); box-shadow:0 0 10px #00ffcc; }
+    .experience-box { background:rgba(0,0,0,0.75); padding:2rem; border-radius:12px; max-width:1000px; margin:8% auto; box-shadow:0 0 15px #00ffcc; text-align:left; position:relative; z-index:5; }
+    .experience-box h1 { color:#00ffcc; font-size:2.2rem; margin-bottom:1.5rem; text-shadow:0 0 10px #00ffcc; text-align:center; }
+    .accordion-button { background:rgba(0,0,0,0.7); color:#00ffcc; font-weight:bold; }
+    .accordion-button:not(.collapsed) { background:#00ffcc; color:#000; }
+    .accordion-body { background:rgba(0,255,204,0.1); }
+    footer { text-align:center; color:#00ffcc; font-size:0.9rem; font-weight:bold; padding:10px 0; margin-top:20px; }
+  </style>
+</head>
+<body>
+  <nav>
+    <div class="logo">JSK</div>
+    <div class="nav-links">
+      <a href="index.html">Home</a><a href="vision.html">Vision</a><a href="skills.html">Skills</a>
+      <a href="experience.html">Experience</a><a href="education.html">Education</a><a href="contact.html">Contact</a>
+    </div>
+  </nav>
+
+  <div class="experience-box">
+    <h1>Professional Experience</h1>
+    <div class="accordion" id="experienceAccordion">
+
+      <!-- Tata Communications -->
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingTata">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTata">
+            Tata Communications and Transformation Services (Jul 2022 – Present)
+          </button>
+        </h2>
+        <div id="collapseTata" class="accordion-collapse collapse" data-bs-parent="#experienceAccordion">
+          <div class="accordion-body">
+            <div class="keywords">Keywords: Power BI, Power Apps, Power Pages, GIS, OSP/ISP, Site Audits</div>
+            <ul>
+              <li>Designed and delivered Power BI dashboards for network/audit reporting.</li>
+              <li>Developed Power Apps to validate GIS/telecom data and automate workflows.</li>
+              <li>Built Power Pages for secure role-based access to reports.</li>
+              <li>Managed OSP/ISP spatial data using Smallworld PNI/PRM and QGIS.</li>
+              <li>Led 250+ site audits and feasibility assessments.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Sanmina -->
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingSanmina">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSanmina">
+            Sanmina Corporation (2019 – 2022)
+          </button>
+        </h2>
+        <div id="collapseSanmina" class="accordion-collapse collapse" data-bs-parent="#experienceAccordion">
+          <div class="accordion-body">
+            <div class="keywords">Keywords: SMT, Lean Manufacturing, IPC-A-610, IATF 16949</div>
+            <ul>
+              <li>Implemented SMT processes including reflow and wave soldering.</li>
+              <li>Conducted AOI and visual inspections ensuring IPC-A-610 compliance.</li>
+              <li>Led Lean Manufacturing initiatives and GAP analysis.</li>
+              <li>Ensured quality standards compliance with IATF 16949.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Reliance Jio -->
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingJio">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseJio">
+            Reliance Jio Infocomm Limited (2016 – 2019)
+          </button>
+        </h2>
+        <div id="collapseJio" class="accordion-collapse collapse" data-bs-parent="#experienceAccordion">
+          <div class="accordion-body">
+            <div class="keywords">Keywords: OSP/ISP Fiber Deployment, Splicing, OTDR, OLT/ONU Config</div>
+            <ul>
+              <li>Deployed OSP/ISP fiber networks across multiple regions.</li>
+              <li>Performed fiber splicing and OTDR analysis for loss measurement.</li>
+              <li>Configured OLT/ONU devices for GPON networks.</li>
+              <li>Handled troubleshooting and maintenance of fiber infrastructure.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- RajNET -->
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingRajnet">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseRajnet">
+            RajNET (Government of Rajasthan Project) (2014 – 2016)
+          </button>
+        </h2>
+        <div id="collapseRajnet" class="accordion-collapse collapse" data-bs-parent="#experienceAccordion">
+          <div class="accordion-body">
+            <div class="keywords">Keywords: GIS Mapping, Fiber Planning, Troubleshooting</div>
+            <ul>
+              <li>Conducted GIS mapping for fiber routes.</li>
+              <li>Planned fiber deployment for government connectivity projects.</li>
+              <li>Provided troubleshooting and support for network issues.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <footer>© Sathishkumar J ®</footer>
+
+  <!-- Background Animation -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vanta/dist/vanta.net.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    VANTA.NET({
+      el: "body",
+      mouseControls: true,
+      touchControls: true,
+      minHeight: window.innerHeight,
+      minWidth: window.innerWidth,
+      scale: 1.0,
+      scaleMobile: 1.0,
+      color: 0x00cccc,
+      backgroundColor: 0x000000,
+      points: 12.0,
+      maxDistance: 25.0,
+      spacing: 18.0
+    });
+  </script>
+</body>
+</html>

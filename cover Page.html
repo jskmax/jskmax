@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cover Page - Sathishkumar J</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    html, body {
+      margin: 0; padding: 0;
+      height: 100%; width: 100%;
+      font-family: Arial, sans-serif;
+      color: white;
+      background: #000;
+      overflow: hidden;
+    }
+
+    #background {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100vw; height: 100vh;
+      z-index: -1;
+    }
+
+    /* Sticky top navigation bar with logo */
+    nav {
+      position: fixed;
+      top: 0; width: 100%;
+      background: rgba(0,0,0,0.85);
+      padding: 0.8rem 2rem;
+      display: flex; align-items: center; justify-content: space-between;
+      z-index: 10;
+      border-bottom: 2px solid #00ffcc;
+      box-shadow: 0 0 10px #00ffcc;
+    }
+    .logo {
+      font-size: 1.8rem; font-weight: bold;
+      color: #00ffcc; letter-spacing: 3px;
+      text-shadow: 0 0 10px #00ffcc, 0 0 20px #00ffcc;
+      animation: glow 2s infinite alternate;
+    }
+    @keyframes glow {
+      from { text-shadow: 0 0 10px #00ffcc; }
+      to { text-shadow: 0 0 20px #00ffcc, 0 0 30px #00ffcc; }
+    }
+
+    .nav-links {
+      display: flex; gap: 20px;
+    }
+    .nav-links a {
+      color: #00ffcc; text-decoration: none;
+      font-weight: bold; padding: 6px 12px;
+      border-radius: 6px; transition: all 0.3s ease;
+    }
+    .nav-links a:hover {
+      background: #004080; color: #fff;
+      transform: scale(1.1);
+      box-shadow: 0 0 10px #00ffcc;
+    }
+
+    /* Cover box */
+    .cover-box {
+      background: rgba(0,0,0,0.75);
+      padding: 3rem;
+      border-radius: 12px;
+      max-width: 800px;
+      margin: 12% auto;
+      box-shadow: 0 0 15px #00ffcc;
+      text-align: center;
+    }
+    .cover-box h1 {
+      color: #00ffcc;
+      font-size: 2.8rem;
+      margin-bottom: 1rem;
+      text-shadow: 0 0 10px #00ffcc;
+    }
+    .cover-box p {
+      font-size: 1.3rem;
+      line-height: 1.6;
+    }
+
+    footer {
+      position: fixed;
+      bottom: 0; width: 100%;
+      text-align: center;
+      color: #00ffcc;
+      font-size: 0.9rem; font-weight: bold;
+      padding: 10px 0;
+    }
+    footer::before {
+      content: ""; display: block;
+      height: 2px; width: 80%;
+      margin: 0 auto 8px auto;
+      background: linear-gradient(90deg, transparent, #00ffcc, transparent);
+      box-shadow: 0 0 8px #00ffcc;
+    }
+  </style>
+</head>
+<body>
+  <!-- Animated Background -->
+  <div id="background"></div>
+
+  <!-- Sticky Navigation Bar -->
+  <nav>
+    <div class="logo">JSK</div>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="vision.html">Vision</a>
+      <a href="skills.html">Skills</a>
+      <a href="experience.html">Experience</a>
+      <a href="education.html">Education</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </nav>
+
+  <!-- Cover Content -->
+  <div class="cover-box">
+    <h1>Welcome to My Portfolio</h1>
+    <p>
+      I am <strong>Sathishkumar J</strong>, a Telecom & Manufacturing Engineer and Power Platform professional.  
+      Explore my journey through skills, experiences, and vision — all unified under a modern, animated design.  
+      This portfolio reflects my passion for innovation, precision, and global connectivity.
+    </p>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    © Sathishkumar J ®
+  </footer>
+
+  <!-- Background Animation -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r121/three.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vanta/dist/vanta.net.min.js"></script>
+  <script>
+    VANTA.NET({
+      el: "#background",
+      mouseControls: true,
+      touchControls: true,
+      minHeight: 200.00,
+      minWidth: 200.00,
+      scale: 1.0,
+      scaleMobile: 1.0,
+      color: 0x00ffcc,          // teal network lines
+      backgroundColor: 0x000000, // dark background
+      points: 12.0,
+      maxDistance: 20.0,
+      spacing: 18.0
+    });
+  </script>
+</body>
+</html>
