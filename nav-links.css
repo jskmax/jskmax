@@ -1,0 +1,6 @@
+.nav-links {
+  display: flex;
+  flex-wrap: wrap;   /* allow wrapping */
+  gap: 10px;
+  justify-content: center;
+}
