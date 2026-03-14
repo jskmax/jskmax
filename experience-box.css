@@ -1,0 +1,5 @@
+.experience-box, .education-box, .contact-box {
+  margin: 100px auto 20px auto; /* space below nav */
+  padding: 1rem;
+  max-width: 95%;              /* shrink to fit mobile */
+}
