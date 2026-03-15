@@ -3,32 +3,146 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>vision - Sathishkumar J</title>
+  <title>Vision - Sathishkumar J</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+  <style>
+    /* General Reset */
+    html, body {
+      margin:0; padding:0; width:100%;
+      font-family:Arial,sans-serif; color:white;
+      background:#000;
+    }
+
+    /* Background Animation */
+    #background {
+      position:fixed; top:0; left:0;
+      width:100vw; height:100vh;
+      z-index:-1;
+    }
+
+    /* Sticky Navigation Bar */
+    nav {
+      position:fixed; top:0; width:100%;
+      background:rgba(0,0,0,0.85);
+      padding:0.8rem 1rem;
+      display:flex; align-items:center; justify-content:space-between;
+      flex-wrap:wrap;
+      z-index:1000;
+      border-bottom:2px solid #00ffcc;
+      box-shadow:0 0 10px #00ffcc;
+    }
+    .logo {
+      font-weight:bold; font-size:1.2rem;
+      color:#00ffcc; letter-spacing:2px;
+      text-shadow:0 0 10px #00ffcc;
+    }
+    .nav-links {
+      display:flex; flex-wrap:wrap; gap:10px; justify-content:center;
+    }
+    .nav-links a {
+      color:#00ffcc; text-decoration:none; font-weight:bold;
+      padding:10px 16px; border-radius:6px;
+      transition:background 0.3s;
+    }
+    .nav-links a:hover {
+      background:#004080; color:#fff;
+    }
+
+    /* Content Box */
+    .content-box {
+      background:rgba(0,0,0,0.75);
+      padding:2rem; border-radius:12px;
+      max-width:95%; margin:100px auto 20px auto;
+      text-align:center; box-shadow:0 0 15px #00ffcc;
+    }
+    h1 { color:#00ffcc; margin-bottom:1rem; text-shadow:0 0 10px #00ffcc; }
+    p { font-size:1.2rem; line-height:1.6; }
+
+    /* Profile Image Section */
+    .profile-image {
+      text-align:center;
+      margin:20px auto 80px auto;
+    }
+    .profile-image img {
+      max-width:200px;
+      border-radius:50%;
+      box-shadow:0 0 15px #00ffcc;
+    }
+
+    /* Footer */
+    footer {
+      position:fixed; bottom:0; width:100%;
+      text-align:center; color:#00ffcc;
+      font-size:0.9rem; font-weight:bold;
+      padding:10px 0; background:rgba(0,0,0,0.85);
+    }
+    footer::before {
+      content:""; display:block; height:2px; width:80%;
+      margin:0 auto 8px auto;
+      background:linear-gradient(90deg,transparent,#00ffcc,transparent);
+      box-shadow:0 0 8px #00ffcc;
+    }
+
+    /* Responsive Adjustments */
+    @media (max-width: 768px) {
+      .logo { font-size:1rem; }
+      .nav-links { flex-direction:column; align-items:center; }
+      .nav-links a { font-size:0.9rem; width:100%; text-align:center; }
+      .content-box { padding:1rem; margin-top:120px; }
+      h1 { font-size:1.5rem; }
+      p { font-size:1rem; line-height:1.4; }
+      .profile-image img { max-width:150px; }
+    }
+  </style>
 </head>
 <body>
   <div id="background"></div>
+
+  <!-- Navigation -->
   <nav>
     <div class="logo">SJ</div>
     <div class="nav-links">
       <a href="index.html">Home</a>
-      <a href="vision.html">vision</a>
+      <a href="vision.html">Vision</a>
       <a href="skills.html">Skills</a>
       <a href="experience.html">Experience</a>
       <a href="Education.html">Education</a>
       <a href="contact.html">Contact</a>
     </div>
   </nav>
+
+  <!-- Vision Content -->
   <div class="content-box">
-    <h1>My vision</h1>
-    <p>My vision is to harness technology to create smarter, more connected systems that empower businesses and communities. I aspire to lead projects that integrate innovation with sustainability, ensuring that every solution contributes to a better, more efficient future. By combining technical expertise with strategic foresight, I aim to shape a world where connectivity drives progress.</p>
+    <h1>My Vision</h1>
+    <p>
+      My vision is to harness technology to create smarter, more connected systems that empower businesses and communities.
+      I aspire to lead projects that integrate innovation with sustainability, ensuring that every solution contributes to a better, more efficient future.
+      By combining technical expertise with strategic foresight, I aim to shape a world where connectivity drives progress.
+    </p>
   </div>
+
+  <!-- Profile Image -->
+  <div class="profile-image">
+    <img src="profile.png" alt="Sathishkumar J">
+  </div>
+
+  <!-- Footer -->
   <footer>© Sathishkumar J ®</footer>
+
+  <!-- Background Animation -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r121/three.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/vanta/dist/vanta.net.min.js"></script>
   <script>
-    VANTA.NET({ el:"#background", mouseControls:true, touchControls:true, color:0x00ffcc, backgroundColor:0x0a0f2c, points:12.0, maxDistance:20.0, spacing:18.0 })
+    VANTA.NET({
+      el:"#background",
+      mouseControls:true,
+      touchControls:true,
+      color:0x00ffcc,
+      backgroundColor:0x0a0f2c,
+      points:12.0,
+      maxDistance:20.0,
+      spacing:18.0
+    })
   </script>
 </body>
 </html>
