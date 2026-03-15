@@ -8,16 +8,23 @@
   <style>
     html, body { margin:0; padding:0; height:100%; width:100%; font-family:Arial,sans-serif; color:white; }
     #background { position:fixed; top:0; left:0; width:100vw; height:100vh; z-index:-1; }
-    nav { position:fixed; top:0; width:100%; background:rgba(0,0,0,0.85); padding:0.8rem 2rem; display:flex; align-items:center; justify-content:space-between; z-index:10; border-bottom:2px solid #00ffcc; box-shadow:0 0 10px #00ffcc; }
+    nav { position:fixed; top:0; width:100%; background:rgba(0,0,0,0.85); padding:0.8rem 1rem; display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; z-index:10; border-bottom:2px solid #00ffcc; box-shadow:0 0 10px #00ffcc; }
     .logo { font-weight:bold; font-size:1.2rem; color:#00ffcc; letter-spacing:2px; }
-    .nav-links { display:flex; gap:20px; }
-    .nav-links a { color:#00ffcc; text-decoration:none; font-weight:bold; padding:6px 12px; border-radius:6px; transition:background 0.3s; }
+    .nav-links { display:flex; flex-wrap:wrap; gap:10px; justify-content:center; }
+    .nav-links a { color:#00ffcc; text-decoration:none; font-weight:bold; padding:10px 16px; border-radius:6px; transition:background 0.3s; }
     .nav-links a:hover { background:#004080; color:#fff; }
-    .content-box { background:rgba(0,0,0,0.75); padding:3rem; border-radius:12px; max-width:800px; margin:12% auto; text-align:center; }
+    .content-box { background:rgba(0,0,0,0.75); padding:2rem; border-radius:12px; max-width:95%; margin:100px auto 20px auto; text-align:center; }
     h1 { color:#00ffcc; margin-bottom:1rem; }
     p { font-size:1.2rem; line-height:1.6; }
     footer { position:fixed; bottom:0; width:100%; text-align:center; color:#00ffcc; font-size:0.9rem; font-weight:bold; padding:10px 0; }
     footer::before { content:""; display:block; height:2px; width:80%; margin:0 auto 8px auto; background:linear-gradient(90deg,transparent,#00ffcc,transparent); box-shadow:0 0 8px #00ffcc; }
+    @media (max-width: 768px) {
+      .logo { font-size: 1rem; }
+      .nav-links a { font-size: 0.9rem; padding: 8px 12px; }
+      .content-box { padding: 1rem; margin-top: 120px; }
+      h1 { font-size: 1.5rem; }
+      p { font-size: 1rem; line-height: 1.4; }
+    }
   </style>
 </head>
 <body>
@@ -29,15 +36,13 @@
       <a href="vision.html">vision</a>
       <a href="skills.html">Skills</a>
       <a href="experience.html">Experience</a>
-      <a href="education.html">Education</a>
+      <a href="Education.html">Education</a>
       <a href="contact.html">Contact</a>
     </div>
   </nav>
   <div class="content-box">
     <h1>My vision</h1>
-    <p>My vision is to harness technology to create smarter, more connected systems that empower businesses and communities.  
-       I aspire to lead projects that integrate innovation with sustainability, ensuring that every solution contributes to a better, more efficient future.  
-       By combining technical expertise with strategic foresight, I aim to shape a world where connectivity drives progress.</p>
+    <p>My vision is to harness technology to create smarter, more connected systems that empower businesses and communities. I aspire to lead projects that integrate innovation with sustainability, ensuring that every solution contributes to a better, more efficient future. By combining technical expertise with strategic foresight, I aim to shape a world where connectivity drives progress.</p>
   </div>
   <footer>© Sathishkumar J ®</footer>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r121/three.min.js"></script>
