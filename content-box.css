@@ -1,0 +1,8 @@
+.content-box {
+  background:rgba(0,0,0,0.75);
+  padding:2rem;
+  border-radius:12px;
+  max-width:95%;     /* ✅ fits mobile */
+  margin:100px auto 20px auto; /* ✅ space below nav */
+  text-align:center;
+}
