@@ -2,7 +2,6 @@
 html, body {
   margin: 0;
   padding: 0;
-  height: 100%;
   width: 100%;
   font-family: Arial, sans-serif;
   color: white;
@@ -10,99 +9,95 @@ html, body {
   line-height: 1.5;
 }
 
-/* Navigation Bar */
+/* Background Animation Container */
+#background {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100vw; height: 100vh;
+  z-index: -1;
+}
+
+/* Sticky Navigation Bar */
 nav {
   position: fixed;
-  top: 0;
-  width: 100%;
+  top: 0; width: 100%;
   background: rgba(0,0,0,0.85);
   padding: 0.8rem 1rem;
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap; /* ✅ allows wrapping on mobile */
-  z-index: 10;
+  display: flex; align-items: center; justify-content: space-between;
+  flex-wrap: wrap;
+  z-index: 1000;
   border-bottom: 2px solid #00ffcc;
   box-shadow: 0 0 10px #00ffcc;
 }
-
 .logo {
-  font-size: 1.8rem;
-  font-weight: bold;
-  color: #00ffcc;
-  letter-spacing: 3px;
-  text-shadow: 0 0 10px #00ffcc, 0 0 20px #00ffcc;
-}
-
-.nav-links {
-  display: flex;
-  flex-wrap: wrap; /* ✅ prevents hiding on mobile */
-  gap: 10px;
-  justify-content: center;
-}
-
-.nav-links a {
-  color: #00ffcc;
-  text-decoration: none;
-  font-weight: bold;
-  padding: 6px 12px;
-  border-radius: 6px;
-  transition: 0.3s;
-}
-
-.nav-links a:hover {
-  background: #004080;
-  color: #fff;
-  transform: scale(1.1);
-  box-shadow: 0 0 10px #00ffcc;
-}
-
-/* Content Boxes */
-.experience-box, .education-box, .contact-box {
-  background: rgba(0,0,0,0.75);
-  padding: 2rem;
-  border-radius: 12px;
-  max-width: 95%; /* ✅ fits mobile */
-  margin: 100px auto 20px auto; /* ✅ space below nav */
-  box-shadow: 0 0 15px #00ffcc;
-  text-align: left;
-}
-
-/* Headings */
-h1 {
-  color: #00ffcc;
-  font-size: 2rem;
-  margin-bottom: 1.5rem;
+  font-weight: bold; font-size: 1.2rem;
+  color: #00ffcc; letter-spacing: 2px;
   text-shadow: 0 0 10px #00ffcc;
+}
+.nav-links {
+  display: flex; flex-wrap: wrap;
+  gap: 10px; justify-content: center;
+}
+.nav-links a {
+  color: #00ffcc; text-decoration: none; font-weight: bold;
+  padding: 10px 16px; border-radius: 6px;
+  transition: background 0.3s;
+}
+.nav-links a:hover {
+  background: #004080; color: #fff;
+}
+
+/* Content Boxes (Vision, Experience, Education, Contact, etc.) */
+.content-box, .experience-box, .education-box, .contact-box {
+  background: rgba(0,0,0,0.75);
+  padding: 2rem; border-radius: 12px;
+  max-width: 95%;
+  margin: 100px auto 20px auto; /* space below nav */
   text-align: center;
+  box-shadow: 0 0 15px #00ffcc;
+}
+h1 {
+  color: #00ffcc; margin-bottom: 1rem;
+  text-shadow: 0 0 10px #00ffcc;
+}
+p {
+  font-size: 1.2rem; line-height: 1.6;
 }
 
-/* Entries */
-.experience-entry, .edu-entry {
-  margin: 20px 0;
-  padding: 15px;
-  border-radius: 8px;
-  background: rgba(0,255,204,0.1);
+/* Profile Image Section */
+.profile-image {
+  text-align: center;
+  margin: 20px auto 80px auto; /* space above footer */
 }
-
-.experience-entry strong, .edu-entry strong {
-  color: #00ffcc;
-  font-size: 1.2rem;
+.profile-image img {
+  max-width: 200px;
+  border-radius: 50%;
+  box-shadow: 0 0 15px #00ffcc;
 }
 
 /* Footer */
 footer {
-  text-align: center;
-  color: #00ffcc;
-  font-size: 0.9rem;
-  font-weight: bold;
-  padding: 10px 0;
-  margin-top: 20px;
+  position: fixed; bottom: 0; width: 100%;
+  text-align: center; color: #00ffcc;
+  font-size: 0.9rem; font-weight: bold;
+  padding: 10px 0; background: rgba(0,0,0,0.85);
+}
+footer::before {
+  content: ""; display: block; height: 2px; width: 80%;
+  margin: 0 auto 8px auto;
+  background: linear-gradient(90deg, transparent, #00ffcc, transparent);
+  box-shadow: 0 0 8px #00ffcc;
 }
 
-/* ✅ Responsive Adjustments */
+/* ✅ Responsive Adjustments for Mobile Portrait */
 @media (max-width: 768px) {
-  .logo { font-size: 1.2rem; }
-  .nav-links a { font-size: 0.8rem; padding: 4px 8px; }
+  .logo { font-size: 1rem; }
+  .nav-links { flex-direction: column; align-items: center; }
+  .nav-links a { font-size: 0.9rem; width: 100%; text-align: center; }
+  .content-box, .experience-box, .education-box, .contact-box {
+    padding: 1rem; margin-top: 120px;
+  }
   h1 { font-size: 1.5rem; }
-  .experience-box, .education-box, .contact-box { padding: 1rem; }
+  p { font-size: 1rem; line-height: 1.4; }
+  .profile-image img { max-width: 150px; }
 }
