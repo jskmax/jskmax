@@ -10,8 +10,7 @@
       margin: 0; padding: 0;
       font-family: Arial, sans-serif;
       color: #e0e0e0;
-      background: #0a0a0a; /* dark background */
-      overflow: hidden;
+      background: #0a0a0a; /* dark immersive background */
     }
 
     /* Sticky Navigation */
@@ -65,8 +64,8 @@
     .vision-image img {
       max-width: 280px;
       height: auto;
-      border-radius: 8px;
-      box-shadow: 0 0 20px #ff6666;
+      border-radius: 0; /* ✅ No border */
+      box-shadow: none; /* ✅ No shadow */
     }
 
     .content-box {
@@ -81,8 +80,8 @@
     }
 
     .content-box p {
-      font-size: 1.05rem;
-      line-height: 1.6;
+      font-size: 1.1rem;
+      line-height: 1.7;
     }
 
     footer {
@@ -133,20 +132,5 @@
 
   <!-- Footer -->
   <footer>© Sathishkumar J ®</footer>
-
-  <!-- Red Globe Background -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/vanta/dist/vanta.globe.min.js"></script>
-  <script>
-    VANTA.GLOBE({
-      el: "body",
-      mouseControls: true, touchControls: true,
-      minHeight: 200.00, minWidth: 200.00,
-      scale: 1.0, scaleMobile: 1.0,
-      color: 0xff6666,          // Light red globe lines
-      backgroundColor: 0x0a0a0a, // Dark background
-      size: 1.3
-    });
-  </script>
 </body>
 </html>
