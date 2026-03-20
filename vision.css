@@ -1,0 +1,8 @@
+.vision-img {
+  width: 400px;       /* Adjust size */
+  height: auto;
+  background: none;   /* Ensures no background */
+  border: none;       /* Removes border */
+  box-shadow: none;   /* Removes shadow */
+  object-fit: contain; /* Keeps proportions */
+}
