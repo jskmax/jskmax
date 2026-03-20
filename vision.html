@@ -10,7 +10,7 @@
       margin: 0; padding: 0;
       font-family: Arial, sans-serif;
       color: #e0e0e0;
-      background: #0a0a0a; /* dark immersive background */
+      background: #0a0a0a; /* immersive dark background */
     }
 
     /* Sticky Navigation */
@@ -53,34 +53,34 @@
     /* Vision Layout */
     .vision-layout {
       display: flex;
-      align-items: center;
-      justify-content: space-between;
+      align-items: flex-start; /* ✅ Align top edges */
+      justify-content: center; /* ✅ Center horizontally */
+      gap: 40px; /* ✅ Space between image and text */
       min-height: 100vh;
-      padding: 0 10%;
+      padding: 120px 10% 60px; /* ✅ Top padding to clear nav */
       position: relative;
       z-index: 5;
     }
 
     .vision-image img {
-      max-width: 280px;
+      max-width: 260px; /* ✅ Reduced size */
       height: auto;
       border-radius: 0; /* ✅ No border */
       box-shadow: none; /* ✅ No shadow */
     }
 
     .content-box {
-      max-width: 55%;
-      margin-left: 40px;
+      max-width: 600px;
     }
 
     .content-box h1 {
-      font-size: 2.5rem;
+      font-size: 2.3rem;
       color: #ff6666;
       margin-bottom: 20px;
     }
 
     .content-box p {
-      font-size: 1.1rem;
+      font-size: 1.05rem;
       line-height: 1.7;
     }
 
